@@ -1,0 +1,9 @@
+setuptools
+fastapi
+uvicorn
+python-dotenv
+pymongo
+pymongo[srv]
+motor
+bcrypt
+pyjwt
