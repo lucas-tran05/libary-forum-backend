@@ -2,14 +2,20 @@ def detail_book(book) -> dict:
     return {
         "id": str(book["_id"]),
         "title": book["title"],
-        # "author": book["author"],
-        "description": book["description"],
-        # "price": book["price"],
-        # "rating": book["rating"],
-        # "cover": book["cover"],
-        # "created_at": book["created_at"],
+        "author": book["author"],
+        "published_date": book["published_date"],
+        "introduction": book["introduction"],
+        "cover": book["cover"],
+        "file": book["file"],
+        "status": book["status"],
+        "user_id": book["user_id"],
+        "created_at": book["created_at"],
+        "updated_at": book["updated_at"],
     }
 
 
-def list_book(books) -> list:
+def list_books(books) -> list:
     return [detail_book(book) for book in books]
+
+
+# Compare this snippet from app/controllers/book_controller.py:
